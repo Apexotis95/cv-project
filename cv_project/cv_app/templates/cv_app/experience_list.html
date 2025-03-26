@@ -1,0 +1,21 @@
+{% extends 'cv_app/base.html' %}
+{% block title %}Experience{% endblock %}
+{% block content %}
+<h2>Work Experience</h2>
+<div class="row">
+    {% for exp in experiences %}
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5>{{ exp.position }}</h5>
+                <p><strong>Company:</strong> {{ exp.company }}</p>
+                <p><strong>Period:</strong> {{ exp.period }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+    <div class="text-center mt-4">
+        <a href="{% url 'home' %}" class="btn btn-secondary">← Back to Home</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'cv_app/base.html' %}
+{% block title %}Education{% endblock %}
+{% block content %}
+<h2>Education</h2>
+<div class="row">
+    {% for edu in educations %}
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-body">
+                <h5>{{ edu.degree }}</h5>
+                <p>{{ edu.institution }} ({{ edu.period }})</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+    <div class="text-center mt-4">
+        <a href="{% url 'home' %}" class="btn btn-secondary">← Back to Home</a>
+    </div>
+{% endblock %}

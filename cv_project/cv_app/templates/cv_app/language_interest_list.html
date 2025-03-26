@@ -1,0 +1,16 @@
+{% extends 'cv_app/base.html' %}
+{% block title %}Languages & Interests{% endblock %}
+{% block content %}
+<h2>Languages & Interests</h2>
+<div class="card">
+    {% for lang_interest in language_interests %}
+    <div class="card-body">
+        <p><strong>Languages:</strong> {{ lang_interest.languages }}</p>
+        <p><strong>Interests:</strong> {{ lang_interest.interests }}</p>
+    </div>
+    {% endfor %}
+</div>
+    <div class="text-center mt-4">
+        <a href="{% url 'home' %}" class="btn btn-secondary">← Back to Home</a>
+    </div>
+{% endblock %}
