@@ -1,7 +1,20 @@
+# Ignore Virtual Environment
 venv/
 cv_env/
+
+# Ignore compiled Python files
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore database files
 *.sqlite3
 *.log
-*.pyc
+
+# Ignore media uploads (optional)
 media/
+
+# Ignore environment variables (security reasons)
+.env
+
